@@ -12,12 +12,12 @@ Page({
   data: {
     load_statue: true,
     shopInfo: {
-      name: 'litemall',
-      address: 'https://github.com/linlinjava/litemall',
+      name: '广州智谷科技有限公司',
+      address: 'http://www.toiqgogo.com',
       latitude: 31.201900,
       longitude: 121.587839,
       linkPhone: '021-xxxx-xxxx',
-      qqNumber: '738696120'
+      qqNumber: '18826252062'
     },
   },
 

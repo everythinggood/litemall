@@ -14,14 +14,14 @@
   </navigator>
  </view>
 
- <view class="a-section a-groupon" wx:if="{{groupons.length > 0}}">
+ <!-- <view class="a-section a-groupon" wx:if="{{groupons.length > 0}}">
   <view class="h">
    <view class="title">
     <view>
-     <!-- <navigator url="../hotGoods/hotGoods"> -->
+     <navigator url="../hotGoods/hotGoods">
      <text class="txt">优惠专区</text>
-     <!-- </navigator> -->
-    </view>
+     </navigator>
+  </view>
    </view>
   </view>
   <view class="b">
@@ -46,7 +46,7 @@
     </navigator>
    </view>
   </view>
- </view>
+ </view> -->
 
  <view class="a-section a-brand">
   <view class="h">

@@ -50,6 +50,19 @@ public class StorageService {
         storage.store(inputStream, contentLength, contentType, key);
 
         String url = generateUrl(key);
+        this.addStorage(key,url,fileName,contentLength,contentType);
+        return url;
+    }
+
+    public LitemallStorage storeToStorageInfo(InputStream inputStream, long contentLength, String contentType, String fileName){
+        String key = generateKey(fileName);
+        storage.store(inputStream, contentLength, contentType, key);
+
+        String url = generateUrl(key);
+        return this.addStorage(key,url,fileName,contentLength,contentType);
+    }
+
+    private LitemallStorage addStorage(String key,String url,String fileName,long contentLength,String contentType){
         LitemallStorage storageInfo = new LitemallStorage();
         storageInfo.setName(fileName);
         storageInfo.setSize((int) contentLength);
@@ -59,8 +72,7 @@ public class StorageService {
         storageInfo.setKey(key);
         storageInfo.setUrl(url);
         litemallStorageService.add(storageInfo);
-
-        return url;
+        return storageInfo;
     }
 
     private String generateKey(String originalFilename) {

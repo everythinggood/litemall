@@ -53,8 +53,8 @@
 
     <!-- 添加对话框 -->
     <el-dialog title="上传对象" :visible.sync="createDialogVisible">
-      <el-upload action="#" list-type="picture" :show-file-list="false" :limit="1" :http-request="handleUpload">
-        <el-button size="small" type="primary">点击上传</el-button>
+      <el-upload ref="upload" action="#" list-type="picture" :show-file-list="true" :limit="1" :http-request="handleUpload">
+        <el-button :loading="uploading" size="small" type="primary">点击上传</el-button>
       </el-upload>
     </el-dialog>
 
@@ -101,7 +101,8 @@ export default {
       rules: {
         name: [{ required: true, message: '对象名称不能为空', trigger: 'blur' }]
       },
-      downloadLoading: false
+      downloadLoading: false,
+      uploading: false
     }
   },
   created() {
@@ -142,11 +143,14 @@ export default {
       this.createDialogVisible = true
     },
     handleUpload(item) {
+      this.$refs.upload.clearFiles()
       const formData = new FormData()
       formData.append('file', item.file)
+      this.uploading = true
       createStorage(formData).then(response => {
         this.list.unshift(response.data.data)
         this.createDialogVisible = false
+        this.uploading = false
         this.$notify({
           title: '成功',
           message: '创建成功',
@@ -154,6 +158,7 @@ export default {
           duration: 2000
         })
       }).catch(() => {
+        this.uploading = false
         this.$message.error('上传失败，请重新上传')
       })
     },

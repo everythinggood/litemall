@@ -7,6 +7,8 @@ import org.linlinjava.litemall.db.domain.*;
 import org.linlinjava.litemall.db.service.*;
 import org.linlinjava.litemall.db.util.OrderUtil;
 import org.linlinjava.litemall.wx.annotation.LoginUser;
+import org.linlinjava.litemall.wx.convert.OrderGoodsVoListConvert;
+import org.linlinjava.litemall.wx.convert.vo.OrderGoodsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -81,19 +83,7 @@ public class WxGrouponController {
         orderVo.put("expNo", order.getShipSn());
 
         List<LitemallOrderGoods> orderGoodsList = orderGoodsService.queryByOid(order.getId());
-        List<Map<String, Object>> orderGoodsVoList = new ArrayList<>(orderGoodsList.size());
-        for (LitemallOrderGoods orderGoods : orderGoodsList) {
-            Map<String, Object> orderGoodsVo = new HashMap<>();
-            orderGoodsVo.put("id", orderGoods.getId());
-            orderGoodsVo.put("orderId", orderGoods.getOrderId());
-            orderGoodsVo.put("goodsId", orderGoods.getGoodsId());
-            orderGoodsVo.put("goodsName", orderGoods.getGoodsName());
-            orderGoodsVo.put("number", orderGoods.getNumber());
-            orderGoodsVo.put("retailPrice", orderGoods.getPrice());
-            orderGoodsVo.put("picUrl", orderGoods.getPicUrl());
-            orderGoodsVo.put("goodsSpecificationValues", orderGoods.getSpecifications());
-            orderGoodsVoList.add(orderGoodsVo);
-        }
+        List<OrderGoodsVo> orderGoodsVoList = (new OrderGoodsVoListConvert()).convertToOrderGoodsVoList(orderGoodsList);
 
         Map<String, Object> result = new HashMap<>();
         result.put("orderInfo", orderVo);

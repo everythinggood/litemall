@@ -49,6 +49,13 @@ Page({
             title: res.data.parentCategory.name
           })
 
+          //当从父分类进来时需转换id为下面默认分类，接口也提供，所以前端转换
+          if (res.data.parentCategory.id == that.data.id) {
+            that.setData({
+              id: res.data.currentCategory.id
+            });
+          }
+
           //nav位置
           let currentIndex = 0;
           let navListCount = that.data.navList.length;
@@ -63,6 +70,8 @@ Page({
               scrollLeft: currentIndex * 60
             });
           }
+          
+
           that.getGoodsList();
 
         } else {

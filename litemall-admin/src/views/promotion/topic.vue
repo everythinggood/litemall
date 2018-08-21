@@ -62,7 +62,7 @@
 
     <!-- 添加或修改对话框 -->
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
-      <el-form :rules="rules" ref="dataForm" :model="dataForm" status-icon label-position="left" label-width="100px" style='width: 400px; margin-left:50px;'>
+      <el-form :rules="rules" ref="dataForm" :model="dataForm" status-icon label-position="left" label-width="100px" >
         <el-form-item label="专题标题" prop="title">
           <el-input v-model="dataForm.title"></el-input>
         </el-form-item>
@@ -75,7 +75,7 @@
 						<i v-else class="el-icon-plus avatar-uploader-icon"></i>
           </el-upload>
         </el-form-item>
-        <el-form-item style="width: 700px;" label="专题内容">
+        <el-form-item label="专题内容">
           <editor :init="editorInit" v-model="dataForm.content"></editor>
         </el-form-item>
         <el-form-item label="商品低价" prop="price">

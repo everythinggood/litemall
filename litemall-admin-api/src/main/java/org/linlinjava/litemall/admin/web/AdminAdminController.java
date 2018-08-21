@@ -120,6 +120,9 @@ public class AdminAdminController {
         }
 
         String rawPassword = admin.getPassword();
+        if(rawPassword == null || rawPassword.length() < 6){
+            return ResponseUtil.fail(402, "管理员密码长度不能小于6");
+        }
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         String encodedPassword = encoder.encode(rawPassword);
         admin.setPassword(encodedPassword);

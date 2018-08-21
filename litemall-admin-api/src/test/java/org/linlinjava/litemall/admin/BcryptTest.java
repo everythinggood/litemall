@@ -13,7 +13,7 @@ public class BcryptTest {
 
     @Test
     public void test() {
-        String rawPassword = "aaaaaa";
+        String rawPassword = "admin";
         String encodedPassword ="";
         BCryptPasswordEncoder bCryptPasswordEncoder =  new BCryptPasswordEncoder();
         encodedPassword = bCryptPasswordEncoder.encode(rawPassword);

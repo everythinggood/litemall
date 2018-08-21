@@ -1,7 +1,7 @@
 {
-  "name": "litemall-admin",
+  "name": "bone-admin",
   "version": "0.1.0",
-  "description": "litemall-admin basing on vue-element-admin 3.6.2",
+  "description": "bone-admin basing on vue-element-admin 3.6.2",
   "author": "linlinjava <linlinjava@163.com>",
   "license": "MIT",
   "private": true,

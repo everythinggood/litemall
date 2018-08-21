@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { Message } from 'element-ui'
 export default {
   name: 'login',
   data() {
@@ -70,10 +71,17 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid && !this.loading) {
           this.loading = true
-          this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
+          this.$store.dispatch('LoginByUsername', this.loginForm).then(res => {
+            console.log(res)
             this.loading = false
             this.$router.push({ path: '/' })
-          }).catch(() => {
+          }).catch(err => {
+            console.log(err)
+            Message({
+              message: err.data.errmsg + ':用户名和密码不对',
+              type: 'error',
+              duration: 5 * 1000
+            })
             this.loading = false
           })
         } else {

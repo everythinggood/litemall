@@ -50,10 +50,8 @@ public class AdminStorageController {
             return ResponseUtil.unlogin();
         }
         String originalFilename = file.getOriginalFilename();
-        String url = storageService.store(file.getInputStream(), file.getSize(), file.getContentType(), originalFilename);
-        Map<String, Object> data = new HashMap<>();
-        data.put("url", url);
-        return ResponseUtil.ok(data);
+        LitemallStorage storageInfo = storageService.storeToStorageInfo(file.getInputStream(), file.getSize(), file.getContentType(), originalFilename);
+        return ResponseUtil.ok(storageInfo);
     }
 
     @PostMapping("/read")

@@ -3,9 +3,9 @@
 
     <!-- 查询和其他操作 -->
     <div class="filter-container">
-      <el-input clearable class="filter-item" style="width: 200px;" placeholder="请输入类目ID" v-model="listQuery.id">
+      <el-input clearable class="filter-item" style="width: 200px;" @keyup.enter.native="handleFilter" placeholder="请输入类目ID" v-model="listQuery.id">
       </el-input>
-      <el-input clearable class="filter-item" style="width: 200px;" placeholder="请输入类目名称" v-model="listQuery.name">
+      <el-input clearable class="filter-item" style="width: 200px;" @keyup.enter.native="handleFilter" placeholder="请输入类目名称" v-model="listQuery.name">
       </el-input>
       <el-button class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">查找</el-button>
       <el-button class="filter-item" type="primary" @click="handleCreate" icon="el-icon-edit">添加</el-button>
@@ -33,7 +33,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="关键字" prop="keyword">
+      <el-table-column align="center" label="关键字" prop="keywords">
       </el-table-column>
 
       <el-table-column align="center" min-width="100" label="简介" prop="desc">
@@ -65,13 +65,13 @@
     </div>
 
     <!-- 添加或修改对话框 -->
-    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
-      <el-form :rules="rules" ref="dataForm" :model="dataForm" status-icon label-position="left" label-width="100px" style='width: 400px; margin-left:50px;'>
+    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible" >
+      <el-form :rules="rules" ref="dataForm" :model="dataForm" status-icon label-position="left" label-width="100px" style="width:100%;">
         <el-form-item label="类目名称" prop="name">
           <el-input v-model="dataForm.name"></el-input>
         </el-form-item>
-        <el-form-item label="关键字" prop="keyword">
-          <el-input v-model="dataForm.keyword"></el-input>
+        <el-form-item label="关键字" prop="keywords">
+          <el-input v-model="dataForm.keywords"></el-input>
         </el-form-item>
         <el-form-item label="级别" prop="level">
           <el-select v-model="dataForm.level" @change="onLevelChange">
@@ -105,8 +105,8 @@
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取消</el-button>
-        <el-button v-if="dialogStatus=='create'" type="primary" @click="createData">确定</el-button>
-        <el-button v-else type="primary" @click="updateData">确定</el-button>
+        <el-button v-if="dialogStatus=='create'" type="primary" @keyup.enter.native="createData" @click="createData">确定</el-button>
+        <el-button v-else type="primary" @keyup.enter.native="updateData" @click="updateData">确定</el-button>
       </div>
     </el-dialog>
 
@@ -171,7 +171,7 @@ export default {
       dataForm: {
         id: undefined,
         name: '',
-        keyword: '',
+        keywords: '',
         level: 'L2',
         pid: undefined,
         desc: '',
@@ -228,7 +228,7 @@ export default {
       this.dataForm = {
         id: undefined,
         name: '',
-        keyword: '',
+        keywords: '',
         level: 'L2',
         pid: undefined,
         desc: '',
@@ -320,7 +320,7 @@ export default {
       this.downloadLoading = true
       import('@/vendor/Export2Excel').then(excel => {
         const tHeader = ['类目ID', '名称', '关键字', '级别', '父类目ID', '类目图标', '类目图片', '简介']
-        const filterVal = ['id', 'name', 'keyword', 'level', 'pid', 'iconUrl', 'picUrl', 'desc']
+        const filterVal = ['id', 'name', 'keywords', 'level', 'pid', 'iconUrl', 'picUrl', 'desc']
         excel.export_json_to_excel2(tHeader, this.list, filterVal, '商品类目信息')
         this.downloadLoading = false
       })

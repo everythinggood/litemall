@@ -17,8 +17,10 @@ class SystemInistService {
     private SystemInistService systemInistService;
     @Autowired
     private Environment environment;
+    @Autowired
+    private ConfigService configService;
 
-    @PostConstruct
+    @PostConstruct//依赖注入后会执行Constructor >> @Autowired >> @PostConstruct
     private void inist() {
         systemInistService = this;
 
