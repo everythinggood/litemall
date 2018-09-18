@@ -8,6 +8,7 @@ server:
   port: 8083
 
 logging:
+  file: log/admin-api.log
   level:
     root:  ERROR
     org.springframework:  ERROR

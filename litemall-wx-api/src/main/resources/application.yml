@@ -8,6 +8,7 @@ server:
   port: 8082
 
 logging:
+  file: log/wx-api.log
   level:
     root:  ERROR
     org.springframework:  ERROR

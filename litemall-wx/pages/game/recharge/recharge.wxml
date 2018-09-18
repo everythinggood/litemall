@@ -1,0 +1,15 @@
+<!--pages/game/recharge/recharge.wxml-->
+<view class='title'>会员充值</view>
+<view class="member-levels">
+    <view class="member-level" wx:for="{{memberLevels}}" wx:key="{{item.id}}" bindtap='rechargeMember' data-money='{{item.money}}'>
+        <view class="money">{{item.money}}元</view>
+        <view class="name">{{item.name}}</view>
+    </view>
+</view>
+<view class='title'>仙缘充值</view>  
+<view class="recharge-rules">
+    <view class="recharge-rule" wx:for="{{rechargeRules}}" wx:key="{{item.id}}" bindtap='rechargeXianYuan' data-money='{{item.money}}'>
+        <view class="money">{{item.money}}元</view>
+        <view class="name">{{item.xianyuan}}个仙缘</view>
+    </view>
+</view>

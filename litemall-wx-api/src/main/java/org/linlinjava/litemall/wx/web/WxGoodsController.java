@@ -152,7 +152,7 @@ public class WxGoodsController {
         data.put("specificationList", specificationList);
         data.put("productList", productList);
         data.put("attribute", goodsAttributeList);
-        data.put("brand", brand);
+        data.put("brand",brand);
         data.put("groupon", rules);
 
         //商品分享图片地址

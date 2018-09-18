@@ -10,4 +10,5 @@ public interface StatMapper {
     List<Map> statUser();
     List<Map> statOrder();
     List<Map> statGoods();
+    List<Map> statUserPackages(Integer userId,String status);
 }

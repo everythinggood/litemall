@@ -4,33 +4,37 @@ var user = require('../../../utils/user.js');
 
 var app = getApp();
 Page({
-  onLoad: function (options) {
+  onLoad: function(options) {
     // 页面初始化 options为页面跳转所带来的参数
     // 页面渲染完成
 
   },
-  onReady: function () {
+  onReady: function() {
 
   },
-  onShow: function () {
+  onShow: function() {
     // 页面显示
   },
-  onHide: function () {
+  onHide: function() {
     // 页面隐藏
 
   },
-  onUnload: function () {
+  onUnload: function() {
     // 页面关闭
 
   },
-  wxLogin: function (e) {
-    if (e.detail.userInfo == undefined){
+  wxLogin: function(e) {
+    if (e.detail.userInfo == undefined) {
       app.globalData.hasLogin = false;
       util.showErrorToast('微信登录失败');
       return;
     }
 
-    user.checkLogin().catch(() => {
+    user.checkLogin().then(() => {
+      wx.navigateBack({
+        delta: 1
+      })
+    }).catch(() => {
 
       user.loginByWeixin(e.detail.userInfo).then(res => {
         app.globalData.hasLogin = true;
@@ -45,7 +49,9 @@ Page({
 
     });
   },
-  accountLogin: function () {
-    wx.navigateTo({ url: "/pages/auth/accountLogin/accountLogin" });
+  accountLogin: function() {
+    wx.navigateTo({
+      url: "/pages/auth/accountLogin/accountLogin"
+    });
   }
 })

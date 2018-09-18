@@ -3,8 +3,8 @@ litemall:
   wx:
     app-id: wx5bb4c6c9c97960ba
     app-secret: f33f10c9873e7720580bfe4dc55425f4
-    mch-id: 111111
-    mch-key: xxxxxx
+    mch-id: 1508173841
+    mch-key: 141879c2a1d650628b358a2a13ac5ffa
     notify-url: http://www.example.com/wx/order/pay-notify
 
   #通知相关配置

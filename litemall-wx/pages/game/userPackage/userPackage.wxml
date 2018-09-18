@@ -1,0 +1,8 @@
+<view class="container">
+    <view class="title">用户背包</view>
+    <view class="piece" wx:for="{{userPackage}}" wx:key="{{item.id}}">
+        <text class="piece-name">{{item.name}}</text>
+        <text class="exchange" bindtap="exchange" data-id='{{item.id}}'>兑换</text>
+        <text class="piece-num">{{item.piece_num}}个</text>
+    </view>
+</view>

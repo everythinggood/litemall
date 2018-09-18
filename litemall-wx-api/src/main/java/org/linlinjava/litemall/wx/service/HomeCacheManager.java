@@ -12,6 +12,10 @@ public class HomeCacheManager {
     public static final String INDEX = "index";
     public static final String CATALOG = "catalog";
     public static final String GOODS = "goods";
+    public static final String MEMBER_LEVEL = "member_level";
+    public static final String RECHARGE_RULE = "recharge_rule";
+    public static final String GIFT_LIST = "gift_list";
+    public static final String GIFT = "gift";
 
     private static Map<String, Map<String, Object>> cacheDataList = new HashMap<>();
 

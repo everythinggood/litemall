@@ -130,7 +130,7 @@
 }
 
 .a-groupon .b .item {
- border-top: 1px solid #d9d9d9;
+ /* border-top: 1px solid #d9d9d9; */
  margin: 0 20rpx;
  height: 244rpx;
  width: 710rpx;
@@ -177,9 +177,13 @@
  padding-top: 8rpx;
 }
 
-.a-groupon .zan-capsule + .zan-capsule {
- margin-left: 10px;
+.a-groupon .capsule-tag .content{
+  padding: 5rpx 10rpx;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  font-size: small;
 }
+
 
 .a-groupon .b .desc {
  width: 476rpx;
@@ -206,7 +210,7 @@
 .a-groupon .b .retailPrice {
  margin-left: 30rpx;
  font-size: 28rpx;
- color: #a78845;
+ color: #b4282d;
 }
 
 .a-new .b {

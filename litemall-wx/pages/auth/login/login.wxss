@@ -3,22 +3,38 @@
     height: auto;
     overflow: hidden;
     padding: 0 40rpx;
-    margin-top: 200rpx;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+icon{
+  background-image: url('http://localhost:8082/wx/storage/fetch/12q6u35kupyt3o4otyl0.png');
+  background-repeat: no-repeat;
+  background-size: 90rpx;
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 100rpx;
+  margin-bottom: 50rpx;
+}
+
+text{
+  color: #7f7f7f;
 }
 
 .wx-login-btn{
     margin: 60rpx 0 40rpx 0;
-    height: 96rpx;
-    line-height: 96rpx;
+    height: 80rpx;
+    line-height: 80rpx;
     font-size: 30rpx;
-    width: 100%;
+    width: 80%;
     border-radius: 6rpx;
 }
 
 .account-login-btn{
     margin: 60rpx 0 40rpx 0;
-    height: 96rpx;
+    height: 60rpx;
     line-height: 96rpx;
     font-size: 30rpx;
     width: 100%;

@@ -29,7 +29,7 @@ page {
   height: 148rpx;
   width: 148rpx;
   border-radius: 50%;
-  border: 1rpx solid #fff;
+  border: 5rpx solid #fff;
 }
 
 .profile-info .info {

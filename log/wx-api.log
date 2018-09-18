@@ -1,0 +1,62 @@
+2018-09-17 09:42:10.183  INFO 8584 --- [main] org.linlinjava.litemall.wx.Application   : Starting Application v0.1.0 on ycy-desktop with PID 8584 (C:\Users\46767\Desktop\litemall\litemall-wx-api\target\litemall-wx-api-0.1.0-exec.jar started by HelloYI in C:\Users\46767\Desktop\litemall)
+2018-09-17 09:42:10.225 DEBUG 8584 --- [main] org.linlinjava.litemall.wx.Application   : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-09-17 09:42:10.226  INFO 8584 --- [main] org.linlinjava.litemall.wx.Application   : The following profiles are active: db,core,wx
+2018-09-17 09:42:28.057  INFO 8584 --- [main] org.linlinjava.litemall.wx.Application   : Started Application in 19.206 seconds (JVM running for 20.3)
+2018-09-17 09:42:28.080 DEBUG 8584 --- [pool-2-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T09:42:28.080autogenerateGameLog start
+2018-09-17 09:42:28.955 DEBUG 8584 --- [pool-2-thread-1] o.l.litemall.wx.web.WxGameController     : 550
+2018-09-17 09:42:31.115 DEBUG 8584 --- [pool-2-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T09:42:31.115autogenerateGameLog end
+2018-09-17 10:12:31.122 DEBUG 8584 --- [pool-2-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T10:12:31.122autogenerateGameLog start
+2018-09-17 10:12:31.201 DEBUG 8584 --- [pool-2-thread-1] o.l.litemall.wx.web.WxGameController     : 600
+2018-09-17 10:12:36.744 DEBUG 8584 --- [pool-2-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T10:12:36.744autogenerateGameLog end
+2018-09-17 11:28:52.795  INFO 11148 --- [main] org.linlinjava.litemall.wx.Application   : Starting Application v0.1.0 on ycy-desktop with PID 11148 (C:\Users\46767\Desktop\litemall\litemall-wx-api\target\litemall-wx-api-0.1.0-exec.jar started by HelloYI in C:\Users\46767\Desktop\litemall)
+2018-09-17 11:28:52.800 DEBUG 11148 --- [main] org.linlinjava.litemall.wx.Application   : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-09-17 11:28:52.802  INFO 11148 --- [main] org.linlinjava.litemall.wx.Application   : The following profiles are active: db,core,wx
+2018-09-17 11:29:09.102 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T11:29:09.102autogenerateGameLog start
+2018-09-17 11:29:09.109  INFO 11148 --- [main] org.linlinjava.litemall.wx.Application   : Started Application in 17.678 seconds (JVM running for 18.643)
+2018-09-17 11:29:09.801 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 751
+2018-09-17 11:29:11.594 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T11:29:11.594autogenerateGameLog end
+2018-09-17 11:59:11.597 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T11:59:11.597autogenerateGameLog start
+2018-09-17 11:59:11.664 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 801
+2018-09-17 11:59:17.071 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T11:59:17.071autogenerateGameLog end
+2018-09-17 12:29:17.073 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T12:29:17.073autogenerateGameLog start
+2018-09-17 12:29:17.125 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 851
+2018-09-17 12:29:22.385 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T12:29:22.385autogenerateGameLog end
+2018-09-17 12:59:22.387 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T12:59:22.387autogenerateGameLog start
+2018-09-17 12:59:22.433 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 901
+2018-09-17 12:59:27.861 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T12:59:27.861autogenerateGameLog end
+2018-09-17 13:29:27.863 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T13:29:27.863autogenerateGameLog start
+2018-09-17 13:29:27.902 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 951
+2018-09-17 13:29:33.290 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T13:29:33.290autogenerateGameLog end
+2018-09-17 13:59:33.292 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T13:59:33.292autogenerateGameLog start
+2018-09-17 13:59:33.324 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 1001
+2018-09-17 13:59:38.667 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T13:59:38.667autogenerateGameLog end
+2018-09-17 14:29:38.671 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:29:38.671autogenerateGameLog start
+2018-09-17 14:29:47.325 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 1051
+2018-09-17 14:29:52.681 DEBUG 11148 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:29:52.681autogenerateGameLog end
+2018-09-17 14:35:10.427  INFO 10576 --- [main] org.linlinjava.litemall.wx.Application   : Starting Application v0.1.0 on ycy-desktop with PID 10576 (C:\Users\46767\Desktop\litemall\litemall-wx-api\target\litemall-wx-api-0.1.0-exec.jar started by HelloYI in C:\Users\46767\Desktop\litemall)
+2018-09-17 14:35:10.433 DEBUG 10576 --- [main] org.linlinjava.litemall.wx.Application   : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-09-17 14:35:10.435  INFO 10576 --- [main] org.linlinjava.litemall.wx.Application   : The following profiles are active: db,core,wx
+2018-09-17 14:35:25.477  INFO 10576 --- [main] org.linlinjava.litemall.wx.Application   : Started Application in 16.489 seconds (JVM running for 17.59)
+2018-09-17 14:35:25.471 DEBUG 10576 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:35:25.471autogenerateGameLog start
+2018-09-17 14:35:25.772 DEBUG 10576 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 1101
+2018-09-17 14:35:31.139 DEBUG 10576 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:35:31.139autogenerateGameLog end
+2018-09-17 14:36:02.147 ERROR 10576 --- [http-nio-8082-exec-4] c.g.b.w.b.r.WxPayUnifiedOrderResult      : 
+结果业务代码异常，返回结果：{return_msg=mch_id参数长度有误, return_code=FAIL},
+返回代码：FAIL，返回信息：mch_id参数长度有误
+2018-09-17 14:47:05.512  INFO 4844 --- [main] org.linlinjava.litemall.wx.Application   : Starting Application v0.1.0 on ycy-desktop with PID 4844 (C:\Users\46767\Desktop\litemall\litemall-wx-api\target\litemall-wx-api-0.1.0-exec.jar started by HelloYI in C:\Users\46767\Desktop\litemall)
+2018-09-17 14:47:05.524 DEBUG 4844 --- [main] org.linlinjava.litemall.wx.Application   : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-09-17 14:47:05.526  INFO 4844 --- [main] org.linlinjava.litemall.wx.Application   : The following profiles are active: db,core,wx
+2018-09-17 14:47:26.608  INFO 4844 --- [main] org.linlinjava.litemall.wx.Application   : Started Application in 23.047 seconds (JVM running for 24.551)
+2018-09-17 14:47:26.638 DEBUG 4844 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:47:26.637autogenerateGameLog start
+2018-09-17 14:47:27.152 DEBUG 4844 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 1151
+2018-09-17 14:47:32.525 DEBUG 4844 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:47:32.525autogenerateGameLog end
+2018-09-17 14:47:56.160 ERROR 4844 --- [http-nio-8082-exec-8] c.g.b.w.b.r.WxPayUnifiedOrderResult      : 
+结果业务代码异常，返回结果：{return_msg=商户号mch_id与appid不匹配, return_code=FAIL},
+返回代码：FAIL，返回信息：商户号mch_id与appid不匹配
+2018-09-17 14:50:40.945  INFO 5864 --- [main] org.linlinjava.litemall.wx.Application   : Starting Application v0.1.0 on ycy-desktop with PID 5864 (C:\Users\46767\Desktop\litemall\litemall-wx-api\target\litemall-wx-api-0.1.0-exec.jar started by HelloYI in C:\Users\46767\Desktop\litemall)
+2018-09-17 14:50:40.951 DEBUG 5864 --- [main] org.linlinjava.litemall.wx.Application   : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2018-09-17 14:50:40.954  INFO 5864 --- [main] org.linlinjava.litemall.wx.Application   : The following profiles are active: db,core,wx
+2018-09-17 14:51:03.440  INFO 5864 --- [main] org.linlinjava.litemall.wx.Application   : Started Application in 24.441 seconds (JVM running for 25.91)
+2018-09-17 14:51:03.542 DEBUG 5864 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:51:03.541autogenerateGameLog start
+2018-09-17 14:51:04.319 DEBUG 5864 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 1201
+2018-09-17 14:51:07.651 DEBUG 5864 --- [pool-1-thread-1] o.l.litemall.wx.web.WxGameController     : 2018-09-17T14:51:07.651autogenerateGameLog end

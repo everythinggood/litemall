@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 34,
+			"current": 37,
 			"list": [
 				{
 					"id": -1,
@@ -103,10 +103,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 12,
 					"name": "商品",
 					"pathName": "pages/goods/goods",
-					"query": "id=1181000"
+					"query": "id=1129015"
 				},
 				{
 					"id": -1,
@@ -237,7 +237,25 @@
 				{
 					"id": -1,
 					"name": "个人中心",
-					"pathName": "pages/ucenter/index/index"
+					"pathName": "pages/ucenter/index/index",
+					"query": ""
+				},
+				{
+					"id": 35,
+					"name": "游戏",
+					"pathName": "pages/game/start/start",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "背包",
+					"pathName": "pages/game/userPackage/userPackage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/game/recharge/recharge"
 				}
 			]
 		}

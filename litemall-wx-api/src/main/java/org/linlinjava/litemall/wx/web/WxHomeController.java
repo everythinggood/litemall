@@ -109,6 +109,7 @@ public class WxHomeController {
                 item.put("goods", goods);
                 item.put("groupon_price", goods.getRetailPrice().subtract(rule.getDiscount()));
                 item.put("groupon_member", rule.getDiscountMember());
+                item.put("groupon_id",rule.getId());
                 grouponList.add(item);
                 grouponGoods.add(goods);
             }

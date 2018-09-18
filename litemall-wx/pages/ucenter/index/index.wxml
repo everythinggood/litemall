@@ -1,6 +1,6 @@
 <view class="container">
-  <view class="profile-info" bindtap="goLogin">
-    <view class="info">
+  <view class="profile-info" >
+    <view class="info" bindtap="goLogin">
       <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
       <text class="name">{{userInfo.nickName}}</text>
     </view>
@@ -41,6 +41,10 @@
     </view>
     <view class='item' bindtap='goAddress'>
       <text class='txt'>地址管理</text>
+      <text class='right-icon'></text>
+    </view>
+    <view class='item' bindtap='goGame'>
+      <text class='txt'>夺宝游戏</text>
       <text class='right-icon'></text>
     </view>
     <view class='while-space'></view>

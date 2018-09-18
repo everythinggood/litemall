@@ -1,0 +1,72 @@
+page {
+    height: 100%;
+    width: 100%;
+    background: rgb(246, 246, 246);
+  }
+  
+  .container {
+    background-color: #f3f3f3;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+  }
+  .game-user-info{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #6b6565;
+  }
+  .game-user-info text{
+      padding: 2rpx 5rpx;
+  }
+  .gift-list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 5rpx;
+   }
+  .gift{
+      text-align: center;
+      background-color: blueviolet;
+      color: white;
+  }
+  .btn-bottom{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  .options{
+      padding-top: 10rpx;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  .game-option  text{
+      font-size: 20rpx;
+      color: white;
+  }
+  .other-options{
+    display: flex;
+    flex-direction: row;
+  }
+  .btn{
+    font-size: 35rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #f4f4f4;
+    background: rgb(131, 130, 130);
+    color: white;
+    padding: 5rpx 10rpx;
+  }
+
+
+  

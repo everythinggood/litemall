@@ -61,7 +61,7 @@
       <el-table-column align="center" label="详情" prop="detail">
         <template slot-scope="scope">
           <el-dialog title="商品详情" :visible.sync="detailDialogVisible">
-            <div v-html="goodsDetail"></div>
+            <div class="goodsDetail" v-html="goodsDetail"></div>
           </el-dialog>
           <el-button type="primary" size="mini" @click="showDetail(scope.row.detail)">查看</el-button>
         </template>
@@ -128,6 +128,18 @@
   .gallery {
     width: 80px;
     margin-right: 10px;
+  }
+  .el-dialog{
+    max-height: calc(100%-30px);
+    max-width: calc(100%-30px);
+    display: flex;
+    flex-direction: column;
+  }
+  .el-dialog__body{
+    overflow: auto;
+  }
+  .goodsDetail{
+    width: 100%;
   }
 </style>
 

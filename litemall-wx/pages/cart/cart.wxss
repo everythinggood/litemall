@@ -387,3 +387,11 @@ page{
     background: #b4282d;
     color: #fff;
 }
+
+
+.go-to-home{
+  width: 50%;
+  border-radius: 5%;
+  background: #666;
+  color: white;
+}

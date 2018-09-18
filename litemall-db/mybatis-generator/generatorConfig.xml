@@ -207,5 +207,61 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
             <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
         </table>
+        <table tableName="litemall_game_gift">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_game_user">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_game_recharge">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_game_log">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="update_time"/>
+        </table>
+        <table tableName="litemall_experience_log">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_member_level">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_member_order">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_recharge_rule">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_user_package">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_point_log">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
+        <table tableName="litemall_exchange_log">
+            <property name="versionColumn" value="version"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride javaType="java.time.LocalDateTime" column="add_time"/>
+        </table>
     </context>
 </generatorConfiguration>

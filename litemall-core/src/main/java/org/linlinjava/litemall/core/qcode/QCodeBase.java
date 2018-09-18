@@ -4,13 +4,16 @@ import cn.binarywang.wx.miniapp.api.WxMaService;
 import me.chanjar.weixin.common.error.WxErrorException;
 import org.linlinjava.litemall.core.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 
 public abstract class QCodeBase {
 
@@ -115,5 +118,60 @@ public abstract class QCodeBase {
         Graphics2D g2D = (Graphics2D) baseImage.getGraphics();
         g2D.drawImage(imageToWrite, x, y, width, height, null);
         g2D.dispose();
+    }
+
+    /**
+     * 将商品图片，商品名字画到模版图中
+     *
+     * @param qrCodeImage 二维码图片
+     * @param goodPicUrl  商品图片地址
+     * @param goodName    商品名称
+     * @return
+     * @throws IOException
+     */
+    protected byte[] drawPicture(BufferedImage qrCodeImage, String goodPicUrl, String goodName, String shopName) throws IOException {
+        //底图
+        ClassPathResource redResource = new ClassPathResource("back.jpg");
+        BufferedImage red = ImageIO.read(redResource.getInputStream());
+
+
+        //商品图片
+        URL goodPic = new URL(goodPicUrl);
+        BufferedImage goodImage = ImageIO.read(goodPic);
+
+        // --- 画图 ---
+
+        //底层空白 bufferedImage
+        BufferedImage baseImage = new BufferedImage(red.getWidth(), red.getHeight(), BufferedImage.TYPE_4BYTE_ABGR_PRE);
+
+        //画上图片
+        drawImgInImg(baseImage, red, 0, 0, red.getWidth(), red.getHeight());
+
+        //画上商品图片
+        drawImgInImg(baseImage, goodImage, 56, 135, 720, 720);
+
+        //画上小程序二维码
+        drawImgInImg(baseImage, qrCodeImage, 442, 1006, 340, 340);
+
+
+        Font font = new Font("Microsoft YaHei", Font.PLAIN, 42);
+        Color color = new Color(167, 136, 69);
+
+        //写上商品名称
+        drawTextInImg(baseImage, goodName, font, color, 112, 955);
+
+        //写上商城名称
+        drawTextInImgCenter(baseImage, shopName, font, color, 98);
+
+
+        //转jpg
+        BufferedImage result = new BufferedImage(baseImage.getWidth(), baseImage
+                .getHeight(), BufferedImage.TYPE_3BYTE_BGR);
+        result.getGraphics().drawImage(baseImage, 0, 0, null);
+        ByteArrayOutputStream bs = new ByteArrayOutputStream();
+        ImageIO.write(result, "jpg", bs);
+
+        //最终byte数组
+        return bs.toByteArray();
     }
 }

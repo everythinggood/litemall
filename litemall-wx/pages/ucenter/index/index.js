@@ -63,6 +63,17 @@ Page({
       });
     };
  },
+  goGame() {
+    if (app.globalData.hasLogin) {
+      wx.navigateTo({
+        url: "/pages/game/start/start"
+      });
+    } else {
+      wx.navigateTo({
+        url: "/pages/auth/login/login"
+      });
+    };
+  },
  goGroupon() {
   if (app.globalData.hasLogin) {
    wx.navigateTo({

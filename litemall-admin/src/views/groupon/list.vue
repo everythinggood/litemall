@@ -50,11 +50,11 @@
     <!-- 添加或修改对话框 -->
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
       <el-form :rules="rules" ref="dataForm" :model="dataForm" status-icon label-position="left" label-width="100px"
-               style='width: 400px; margin-left:50px;'>
+               style='width: 60%; margin-left:50px;'>
         <el-form-item label="商品ID" prop="goodsId">
-          <el-input v-model="dataForm.goodsId"></el-input>
+          <el-input v-model="dataForm.goodsId" placeholder="输入正确的商品ID"></el-input>
         </el-form-item>
-        <el-form-item label="团购折扣" prop="discount">
+        <el-form-item label="团购优惠金额" prop="discount">
           <el-input v-model="dataForm.discount"></el-input>
         </el-form-item>
         <el-form-item label="团购人数要求" prop="discountMember">
@@ -68,8 +68,8 @@
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取消</el-button>
-        <el-button v-if="dialogStatus=='create'" type="primary" @click="createData">确定</el-button>
-        <el-button v-else type="primary" @click="updateData">确定</el-button>
+        <el-button v-if="dialogStatus=='create'" type="primary" @click="createData" :loading="loading">确定</el-button>
+        <el-button v-else type="primary" @click="updateData" :loading="loading">确定</el-button>
       </div>
     </el-dialog>
 
@@ -124,7 +124,8 @@
         },
         rules: {
           goodsId: [{ required: true, message: '商品不能为空', trigger: 'blur' }]
-        }
+        },
+        loading: false
       }
     },
     created() {
@@ -175,15 +176,19 @@
       createData() {
         this.$refs['dataForm'].validate((valid) => {
           if (valid) {
+            this.loading = true
             publishGroupon(this.dataForm).then(response => {
               this.list.unshift(response.data.data)
               this.dialogFormVisible = false
+              this.loading = false
               this.$notify({
                 title: '成功',
                 message: '创建成功',
                 type: 'success',
                 duration: 2000
               })
+            }).catch(() => {
+              this.loading = false
             })
           }
         })
@@ -199,6 +204,7 @@
       updateData() {
         this.$refs['dataForm'].validate((valid) => {
           if (valid) {
+            this.loading = true
             editGroupon(this.dataForm).then(() => {
               for (const v of this.list) {
                 if (v.id === this.dataForm.id) {
@@ -208,11 +214,18 @@
                 }
               }
               this.dialogFormVisible = false
+              this.loading = false
               this.$notify({
                 title: '成功',
                 message: '更新成功',
                 type: 'success',
                 duration: 2000
+              })
+            }).catch(err => {
+              this.loading = false
+              this.$message({
+                type: 'error',
+                message: err.data.errmsg
               })
             })
           }

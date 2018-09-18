@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="game-user-info">
+        <!-- <image class="avator" src="{{userInfo.avatarUrl}}" /> -->
+        <text >呢称：{{userInfo.name}}</text>
+        <text >等级：{{userInfo.level}}</text>
+        <text >EXP: {{userInfo.experience}}</text>
+        <text >宝藏仙缘：{{userInfo.xianyuan}}</text>
+        <text >人参果：{{userInfo.fruit}}</text>
+    </view>
+
+    <view class="gift-list">
+        <view class="gift" wx:for="{{giftList}}" wx:key="{{item.id}}">
+            <text >{{item.name}}</text>
+        </view>
+    </view>
+    
+    <view class='btn-bottom'>
+    <view class="options">
+        <view class="game-option">
+            <view bindtap='gameStart' class='btn'>开始夺宝
+                <text >今日剩余夺宝次数：{{canGameNum}}</text>
+            </view>
+        </view>
+        <view class="other-options">
+            <view bindtap="recharge" class='btn'>充值</view>
+            <view bindtap="userPackage" class='btn'>背包</view>
+            <view bindtap="gameInfo" class='btn'>游戏说明</view>
+        </view>
+    </view>
+    </view>
+</view>

@@ -28,4 +28,14 @@
     from litemall_order_goods
     group by substr(add_time,1, 10)
   </select>
+  <select id="statUserPackages"  resultType="map">
+    SELECT
+    up.gift_id as id,
+    gg.name ,
+    gg.type ,
+    count(up.gift_id) as piece_num
+    from litemall_user_package as up join litemall_game_gift as gg on up.gift_id = gg.id
+    where up.user_id = #{userId} and up.status = #{status}
+    group by up.gift_id,gg.name,gg.type
+  </select>
 </mapper>

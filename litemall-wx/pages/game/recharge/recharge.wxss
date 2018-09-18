@@ -1,0 +1,25 @@
+.member-levels,.recharge-rules{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+.member-level ,.recharge-rule{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(250, 246, 8);
+    margin-right: 15rpx;
+    margin-bottom: 15rpx;
+    padding: 10rpx;
+}
+.member-level name,.recharge-rule name{
+    color: rgb(155, 154, 154);
+    font-size: 10rpx;
+}
+.member-level money{
+    color: aliceblue;
+    font-size: 15rpx;
+}
+
